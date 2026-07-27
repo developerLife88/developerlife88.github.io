@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nasser Alzahrani</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/hexagon.svg">
+    <link rel="icon" type="image/png" href="assets/img/hexagon.svg" sizes="32x32">
+    <link rel="shortcut icon" href="assets/img/hexagon.svg">
+</head>
+
+
+<!-- https://gvef.org -->
+
+<style>
+
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+}
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+    body, .bg-new{
+      color:  white;
+      background: #0c1624;
+    }
+
+
+#loader {
+background: #0c1624;
+}
+     .card{
+      color:  white;
+      background: #0c1624;
+    }
+
+
+.grid-border{
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/*.appHeader{
+    background: black !important;
+    color:white !important;
+}*/
+
+
+.boldT{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+
+.splash-page .iconbox{
+    background: #0c1624; !important;
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+
+
+
+.bg-dark{
+    background: black !important;
+    color: white !important;
+}
+
+
+.btn-dark{
+    background: black !important;
+    color: white !important;
+}
+
+
+
+.d-none-on-mobile{
+   margin:0 auto;
+  }
+
+.card{
+    box-shadow: none !important;
+}
+
+
+.btn-warning{
+color: black !important;
+}
+
+
+
+.divider {
+  height: 1px;
+  background: #E1E1E1E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ width: 90%;
+ margin: 0 auto;
+}
+
+
+.divider-orange {
+  height: 5px;
+  background: #FFB400 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ width: 20%;
+ margin: 0 auto;
+}
+
+
+.divider-blue {
+  height: 5px;
+  background: #0194e2 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ width: 20%;
+ margin: 0 auto;
+}
+
+
+.btn-blue {
+  background: #0194e2 !important;
+  color: white;  
+}
+
+.spacer{
+    margin-bottom: 10px;
+    color: transparent;
+
+}
+
+
+
+.btn-WhiteBorder{
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+
+.btn-WhiteBorder:hover{
+
+    color: white !important
+
+}
+
+
+.wide-block{
+background: transparent !important;
+}
+
+
+.exampleBox{
+    border-radius: 5px !important;
+     border: 1px solid white !important;
+    background: rgba(220, 220, 233, 0.31) !important;
+}
+
+
+.exampleBox h3{
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-shadow: 0 0 10px black;
+}
+
+.listview{
+background: rgba(220, 220, 233, 0.16) !important;
+color: white !important;
+
+}
+
+
+
+
+/*-------------- Beginning of Media Query ----------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+ 
+
+ .boldT{
+    font-weight: normal;
+    font-size: 10px;
+}
+
+.d-none-on-mobile{
+   margin:0;
+  }
+
+.divider-blue {
+    width: 80%;
+}
+}
+
+/*-------------- End of Media Query ---------------------------------------------------------------------------------------------*/
+
+
+.exampleBox{
+    background: transparent !important;
+    border: none !important;
+    text-align: center !important;;
+}
+
+
+.exampleBox p{
+    font-size: 12px !important;
+}
+
+.mt-7{
+    margin-top: 150px !important;
+}
+
+
+
+/*---------------------- Start of Hexagon--------------------------------*/
+.container {
+  max-width: 1200px;
+  margin: 100px auto 20px auto;
+}
+.hex-layer-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 0fr);
+  margin: -18px 0px;
+  justify-content: center;
+  align-content: center;
+}
+.hex-layer-5 {
+  display: grid;
+  justify-content: center;
+  margin: -18px 0px;
+  align-content: center;
+  grid-template-columns: repeat(5, 0fr);
+}
+.hex-layer-4 {
+  display: grid;
+  margin: -18px 0px;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 0fr);
+}
+.hex-layer-3 {
+  display: grid;
+  margin: -18px 0px;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 0fr);
+}
+.hex-layer-2 {
+  display: grid;
+  margin: -18px 0px;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(2, 0fr);
+}
+.hex {
+  height: 150px;
+  width: 150px;
+  align-self: center;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    95% 25%,
+    95% 75%,
+    50% 100%,
+    5% 75%,
+    5% 25%
+  );
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  transition: background 0.4s;
+}
+
+.hex:hover {
+  background: white;
+}
+
+/*----------------------End of Hexagon--------------------------------*/
+
+
+
+
+
+.custome-font{
+    font-size: 15px;
+}
+
+
+.listview {
+    text-align: left !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------------Slide left and right top animation --------------------*/
+/* === BASE STYLES === */
+
+
+
+
+.slide-left,
+.slide-right,
+.slide-top {
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.6s ease, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* === SLIDE FROM LEFT === */
+.slide-left {
+  transform: translateX(-100px);
+}
+
+.slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* === SLIDE FROM RIGHT === */
+.slide-right {
+  transform: translateX(100px);
+}
+
+.slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+/* === SLIDE top === */
+.slide-top {
+  transform: translateY(-100px);
+}
+
+.slide-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------Media Query---------------------------------------------*/
+@media (max-width: 767px) {
+  /* Your mobile styles go here */
+
+.hex-layer-6 {
+    display:inline-block !important;
+}
+
+.hex-layer-5 {
+    display: inline-block !important;
+}
+
+.hex-layer-4 {
+    display: inline-block !important;
+}
+
+.hex-layer-3 {
+    display: inline-block !important;
+}
+
+.hex-layer-2 {
+    display: inline-block !important;
+}
+
+
+.box5{
+    font-size: 8px !important;
+}
+
+
+.col-4{
+    font-size: 8px !important;
+}
+
+
+.custome-font{
+font-size: 9px !important;
+}
+
+
+} /*-------------end of Media Query --------*/
+</style> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- onclick="history.back();" -->
+
+<body class="bg-new">
+
+    <!-- loader -->
+    <div id="loader">
+        <img src="assets/img/flower.svg" style="  filter: invert(100%);" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+
+
+
+    <!-- App Capsule -->
+  
+    <div id="appCapsule">
+   
+       
+            <div class="splash-page mt-5 mb-5">
+             <div class="hex m-auto" style="background: #ffffff;"> <img src="assets/img/myLogo.PNG" alt="image"   style="margin-top:20%;" width="130" height="100"></div>
+     <br>
+                <h1 class="mb-2 text-white" id="typeWriter"></h1>
+                
+                <div class="divider-blue"></div>
+                <div class="spacer"></div>
+                <p>Lecturer & Software Engineer specialized in Back-End Web Application Development</p>
+            </div>
+     
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+
+<h2 class="text-center text-white"  id="WE">Work Experience</h2>
+<div class="divider-blue"></div>
+
+           
+        <div class="container d-none-on-mobile "  >
+
+          <div class="section mt- mb-2">
+            <div class="section-title text-white"> 10 years of work experience </div>
+            <div class="card slide-left">
+                <!-- timeline -->
+                <div class="timeline timed ml-1 mr-2">
+
+                    <div class="item">
+                        <span class="time">Aug 2020 till Now</span>
+                        <div class="dot bg-success"></div>
+                        <div class="content">
+                            <h4 class="title text-white">King Saud bin Abdulaziz University for Health Sciences (KSAU-HS) - Riyadh, Saudi Arabia</h4>
+                            <div class="text">Artificial Intelligence in Health Informatics Lecturer & Course Coordinator</div>
+                            <div class="text">Computer Scienece & Health Informatics Lecturer & Course Coordinator</div> 
+                            <div class="text"> Research Skills Lecturer</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="time">Aug 2017 to Aug 2019</span>
+                        <div class="dot bg-warning"></div>
+                        <div class="content">
+                            <h4 class="title text-white">Pacific Design Academy (PDA) - Victoria BC, Canada</h4>
+                            <div class="text">Web/Mobile Applications Developer & Instructor</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="time">June 2016 to June 2017</span>
+                        <div class="dot bg-danger"></div>
+                        <div class="content">
+                            <h4 class="title text-white">RTG - Sudbury ON, Canada</h4> <!--- reThink Green -->
+                            <div class="text">Web Developer</div>
+                        </div>
+                    </div>
+                 <!--      <div class="item">
+                        <span class="time">April 2015 to May 2016</span>
+                        <div class="dot bg-danger"></div>
+                        <div class="content">
+                            <h4 class="title">...</h4>
+                            <div class="text">Freelancer Web Designer</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="time">April 2010 to July 2010</span>
+                        <div class="dot bg-danger"></div>
+                        <div class="content">
+                            <h4 class="title">Al-Baha University</h4>
+                            <div class="text">IT Assistant</div>
+                        </div>
+                    </div> -->
+                </div>
+
+                 </div>
+
+    </div>
+</div>  <!-------------- container - mobile d-none ----------------->
+
+
+
+
+<div class="divider bg-secondary mt-2 mb-3"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<h2 class="text-center text-white"  id="ED">Education</h2>
+<div class="divider-blue"></div>
+
+           
+        <div class="container d-none-on-mobile"   >
+
+          <div class="section mt- mb-2">
+            <div class="section-title text-white"></div>
+            <div class="card  slide-left">
+                <!-- timeline -->
+                <div class="timeline timed ml-1 mr-2">
+                    <div class="item">
+                        <span class="time">January/ 2016</span>
+                        <div class="dot bg-success"></div>
+                        <div class="content">
+                            <h4 class="title text-white">Master's Degree in Computer Science</h4>
+                            <div class="text">Laurentian University</div>
+                            <div class="text">Sudbury - Canada</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="time">June/ 2011</span>
+                        <div class="dot bg-danger"></div>
+                        <div class="content">
+                            <h4 class="title text-white">Bachlor's Degree in Computer Engineering</h4>
+                            <div class="text">Al-Baha University</div>
+                            <div class="text">Al-Baha - Saudi Arabia</div>
+                        </div>
+                    </div>
+                 <!--      <div class="item">
+                        <span class="time">April 2015 to May 2016</span>
+                        <div class="dot bg-danger"></div>
+                        <div class="content">
+                            <h4 class="title">...</h4>
+                            <div class="text">Freelancer Web Designer</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="time">April 2010 to July 2010</span>
+                        <div class="dot bg-danger"></div>
+                        <div class="content">
+                            <h4 class="title">Al-Baha University</h4>
+                            <div class="text">IT Assistant</div>
+                        </div>
+                    </div> -->
+                </div>
+
+                 </div>
+
+    </div>
+</div>  <!-------------- container - mobile d-none ----------------->
+
+<div class="divider bg-secondary mt-2 mb-3"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<h2 class="text-center text-white"  id="TK">My Toolkit & Tech Stack </h2>
+<div class="divider-blue"></div>
+
+<div class="container" align="center"   >
+  <div class="hex-layer-6 slide-left">
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/python.png" alt="image"  style="background: white; margin-top:15%;" width="100" height="100"></div>
+    <div class="hex" style="background: #ebebeb;"> <img src="assets/img/html5.png" alt="image"  style="background: white; margin-top:15%;" width="100" height="100"></div>
+    <div class="hex" style="background: #663399;"> <img src="assets/img/css.webp" alt="image"  style=" margin-top:1%;" width="100" height="100"></div>
+    <div class="hex" style="background: white;"> <img src="assets/img/Node-js.png" alt="image"   style="background: white; margin-top:25%;" width="120" height="80"></div>
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/Express.svg" alt="image"  style="background: white; margin-top:15%;" width="100" height="100"></div>
+    <div class="hex" style="background: #f7e018;"> <img src="assets/img/js.png" alt="image"   style="margin-top:5%;" width="100" height="100"></div>
+ 
+  </div>
+
+  <div class="hex-layer-5 slide-right">
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/php.svg" alt="image"   style="margin-top:15%;" width="100" height="100"></div>
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/Ionic.png" alt="image"   style="margin-top:30%;" width="120" height="50"></div>
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/pwa.png" alt="image"   style="margin-top:30%;" width="100" height="50"></div>
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/render.png" alt="image"   style="margin-top:15%;" width="100" height="100"></div>
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/heroku.webp" alt="image"   style="margin-top:25%;" width="130" height="70"></div>
+  </div>
+
+  <div class="hex-layer-4 slide-left">
+        <div class="hex" style="background: #ffffff;"> <img src="assets/img/git.jpg" alt="image"   style="margin-top:25%;" width="120" height="70"></div>
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/jQuery.png" alt="image"   style="margin-top:30%;" width="130" height="50"></div>
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/Mysql.png" alt="image"   style="margin-top:20%;" width="100" height="80"></div>
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/bootstrap.jfif" alt="image"   style="margin-top:23%;" width="100" height="80"></div>
+  </div>
+
+
+  <div class="hex-layer-3 slide-right">
+     <div class="hex" style="background: #ffffff;"> <img src="assets/img/GitHub.png" alt="image"   style="margin-top:20%;" width="130" height="80"></div>
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/AWS.png" alt="image"   style="margin-top:25%;" width="130" height="80"></div>
+    <div class="hex" style="background: #ffffff;"> <img src="assets/img/firebase.png" alt="image"   style="margin-top:10%;" width="150" height="100"></div>
+
+  </div>
+
+
+  <div class="hex-layer-2 slide-left">
+<div class="hex" style="background: #ffffff;"> <img src="assets/img/TensorFlow_logo.svg" alt="image"   style="margin-top:15%;" width="150" height="100"></div>
+<div class="hex" style="background: #ffffff;"> <img src="assets/img/ultralytics.png" alt="image"   style="margin-top:10%;" width="130" height="120"></div>
+  </div>
+
+    <div class="hex-layer-1">
+<div class="hex" style="background: #ffffff;"> <img src="assets/img/vs code.png" alt="image"   style="margin-top:15%;" width="130" height="80"></div>
+  </div>
+  <div>
+
+
+
+<div class="divider bg-secondary mt-2 mb-3"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+<h2 class="text-center text-white"  id="TS">Technical Skills</h2>
+<div class="divider-blue"></div>
+
+     <div class="section mt-2 box5">
+<!-------------------------------------------------------------------------------->          
+            <div class="row ">
+<!-------------------------------------------------------------------------------->                  
+                    <div class="col-4  slide-left">
+        <h3 class="text-white custome-font">Web Front-End Development</h3>
+        <ul class="listview simple-listview inset">
+            <li>creating and designing the user interface (UI) and user experience (UX)</li>
+            <li>Structuring web pages for Web-Mobile Apps from scratch (hard-coded)</li>
+            <li>Build reusable component-based applications</li>
+            <li>Ensuring sites look good on all screens (Responsive Design)</li>
+        </ul>
+                </div>
+<!-------------------------------------------------------------------------------->      
+
+
+<!-------------------------------------------------------------------------------->                  
+                    <div class="col-4  slide-top">
+       <h3 class="text-white custome-font">Database Development</h3>
+        <ul class="listview simple-listview inset">
+            <li>Implementing Database Integration: The overall process of linking a web app so it can perform CRUD operations to an App (Create, Read, Update, Delete)</li>
+            <li> Developing Data Layer / Backend: The part of web app architecture responsible for talking to the database</li>
+            <li>Utilizing relational and NoSQL databasess</li>
+        </ul>
+                </div>
+<!-------------------------------------------------------------------------------->  
+
+
+                      <div class="col-4  slide-right">
+       <h3 class="text-white custome-font">Web Back-End Development</h3>
+        <ul class="listview simple-listview inset">
+            <li>Developing web applications on Server-side</li>
+            <li>Developing progressive web app/ cross platforms on iphone & Android</li>
+            <li> Deploying Web Applications on servers</li>
+            <li>Utilizing Python for general purposes</li>
+            <li>Developing AI Solutions</li>
+        </ul>
+                </div>
+
+
+                    
+                            
+<!-------------------------------------------------------------------------------->                  
+                
+<!-------------------------------------------------------------------------------->  
+            </div>
+
+        </div>
+<div class="divider bg-secondary mt-2 mb-3"></div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<h2 class="text-center text-white"  id="OG">On Going Projects</h2>
+<div class="divider-blue"></div>
+
+
+
+
+
+
+
+
+
+<div class="container m-auto text-center mt-5" >
+<div class="wide-block pt-2 pb-2">
+
+                <div class="row">
+                     <div class="col-6">
+                       <button type="button" class="btn btn-block btn-WhiteBorder mr-1 mb-1 custome-font slide-left" >YouTube Mental Focus (Soon)</button>
+                    </div>
+                    <div class="col-6">
+                       <a href="https://safewatch.onrender.com/" target="_blank"><button type="button" class="btn btn-block btn-blue mr-1 mb-1 custome-font slide-right" > Safe-Watch/   منصة  شاهد بأمان     </button></a>
+                    </div>
+                </div>
+
+            </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<div class="spacer">.</div>
+<h2 class="text-center text-white">contact me </h2>
+<div class="divider-blue"></div>
+ -->
+
+
+
+
+
+
+
+<!-- * App Bottom Menu -->
+    <div class="section full mt-4">
+           
+            <!-- App Bottom Menu -->
+            <div class="appBottomMenu bg-dark text-light" style="position: fixed; bottom: 0; z-index: 99; padding-bottom: 0;">
+                <a href="#OG" class="item active">
+                    <div class="col boldT">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+  <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
+  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
+</svg>
+                        <strong>On Going Projects</strong>
+                    </div>
+                </a>
+                <a href="#TS" class="item active">
+                    <div class="col boldT">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
+  <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z"/>
+</svg>
+                        <strong>Technical Skills</strong>
+                    </div>
+                </a>
+                <a href="#TK" class="item active">
+                    <div class="col boldT">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+  <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+</svg>
+                        <strong>My Toolkit</strong>
+                    </div>
+                </a>
+                <a href="#ED" class="item active">
+                    <div class="col boldT">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+  <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z"/>
+  <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z"/>
+</svg>
+                        <strong>Education</strong>
+                    </div>
+                </a>
+                <a href="#WE" class="item active"   >
+                    <div class="col boldT">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+  <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
+  <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
+</svg>
+                        <strong>Work Experience</strong>
+                    </div>
+                </a>
+            </div>
+            <!-- * App Bottom Menu -->
+        </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+    <!-- ///////////// Js Files ////////////////////  -->
+    <!-- Jquery -->
+    <script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="assets/js/lib/popper.min.js"></script>
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+    <!----TypewriterAnimation-------->
+    <script src="assets/js/TypewriterAnimation.js"></script>
+
+
+
+
+
+
+
+<!------------Slide left and right top animation -------------------->
+
+    <script>
+
+        // === TRIGGER ON SCROLL ===
+const slideElements = document.querySelectorAll('.slide-left, .slide-right, .slide-top');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.15 // Triggers when 15% of the element is visible
+});
+
+slideElements.forEach(el => observer.observe(el));
+    </script>
+
+
+
+</body>
+
+</html>
